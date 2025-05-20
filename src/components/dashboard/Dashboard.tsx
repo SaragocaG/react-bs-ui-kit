@@ -40,7 +40,7 @@ export const Dashboard = ({ menuItems, pathname, children, onClickLogo, onClickM
     const windowSize = useWindowSize()
 
     const baseOnClickLogo = () => {
-        if (onClickLogo) onClickLogo() 
+        if (onClickLogo) onClickLogo()
     }
 
     return (
