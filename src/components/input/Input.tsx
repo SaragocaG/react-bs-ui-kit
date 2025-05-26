@@ -14,7 +14,7 @@ export interface ISelectOptions {
 export interface IInputSpecs {
     type?: 'boolean' | 'textarea' | 'select' | 'number' | 'search' | 'decimal' | 'int' | 'float' | 'text' | 'email' | 'date' | 'password' | 'eval' | 'tel' | 'url' | 'time' | 'color',
     key?: string,
-    caption?: string,
+    caption?: any,
     default?: string | number,
     description?: string,
     maxLength?: number,
