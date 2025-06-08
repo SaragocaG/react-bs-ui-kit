@@ -1,8 +1,8 @@
 
 import React from 'react'
+import { MaterialIcon } from '../material-icon';
 import defaultStyle from './Dashboard.module.scss'
 import { useToggler, useWindowSize } from '../../hooks';
-import { MaterialIcon } from '../material-icon';
 import { TouchableOpacity } from '../touchable-opacity';
 
 interface IMenuItem {
