@@ -37,6 +37,8 @@ export interface IComponentProps {
     disabled?: boolean,
     onChange?: any,
     readOnly?: boolean,
+    upperCase?: boolean,
+    lowerCase?: boolean,
     icon?: string,
     labelColor?: Colors,
     autocomplete?: string,
@@ -87,6 +89,8 @@ export const Input = ({
     value,
     testId,
     onChange,
+    upperCase,
+    lowerCase,
     readOnly,
     disabled,
     placeholder,
@@ -96,6 +100,9 @@ export const Input = ({
     onEnterKeyPressed,
     labelColor = Colors.Dark,
 }: IComponentProps) => {
+
+    if (upperCase && lowerCase) throw new Error("input must be either lowerCase or upperCase, not both.");
+
     const INPUT_MAX_LENGTH = 524287
 
     const [descriptionVisible, setDescriptionVisible] = useState(false);
@@ -105,7 +112,12 @@ export const Input = ({
     const inputRef = useRef<any>()
 
     const handleChange = (e: IEvent) => {
-        if (onChange) onChange(name, e.target.value);
+        let newValue = e.target.value;
+
+        if (lowerCase) newValue = `${newValue ?? ''}`.toLowerCase()
+        if (upperCase) newValue = `${newValue ?? ''}`.toUpperCase()
+
+        if (onChange) onChange(name, newValue);
     };
 
     const onFocus = () => {
