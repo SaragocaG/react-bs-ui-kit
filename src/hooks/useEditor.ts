@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-interface IUseEditor {
+export interface IUseEditor {
     value: any,
     changed: boolean,
     setValue(newValue: any): any,

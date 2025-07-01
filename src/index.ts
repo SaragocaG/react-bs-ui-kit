@@ -1,6 +1,14 @@
 export { Colors } from "./enum/Colors";
 
-export { useDimensions, useEditor, usePaginator, useToggler, useWindowSize } from "./hooks";
+export {
+    useDimensions,
+    useEditor,
+    IUseEditor,
+    usePaginator,
+    IUsePaginator,
+    useToggler,
+    useWindowSize
+} from "./hooks";
 
 export { Avatar } from "./components/avatar";
 export { Badge } from "./components/badge";
