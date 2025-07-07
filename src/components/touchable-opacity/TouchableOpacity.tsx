@@ -21,7 +21,7 @@ export const TouchableOpacity = ({ children, testId, onClick, onDoubleClick, dis
         type="button"
         title={alt}
         unselectable="on"
-        className={`touchable text-start ${className}`}
+        className={`touchable text-start ${style.touchableOpacity} ${className}`}
         style={{ background: 'transparent', cursor: disabled ? "default" : cursor }}
         onDoubleClickCapture={(e) => {
           if (onDoubleClick) {
