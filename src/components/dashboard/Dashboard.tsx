@@ -7,10 +7,10 @@ import { TouchableOpacity } from '../touchable-opacity';
 
 interface IMenuItem {
     title: string,
-    path: string,
-    basePath: string,
-    icon: string,
-    exact: boolean,
+    path?: string,
+    basePath?: string,
+    icon?: string,
+    exact?: boolean,
     fontSize?: number
 }
 
